@@ -11,11 +11,11 @@ To start your Phoenix server:
 
 Now you can visit [`localhost:4000/oauth/applications`](http://localhost:4000//oauth/applications) from your browser.
 
-- Login with testuser@example.com / secret1234.
-- Create a new application with urn:ietf:wg:oauth:2.0:oob as Redirect URI
-- Save the application, and take note of of the ID and Secret.
+- Login with `testuser@example.com` / `secret1234`.
+- Create a new application with `urn:ietf:wg:oauth:2.0:oob` as Redirect URI
+- Save the application, and take note of of the `ID` and `Secret`.
 - Click Authorize next to the Redirect URI, authorize yourself and copy the access grant shown.
-- Now we got everything to generate the access token. Replace CLIENT_ID, CLIENT_SECRET and AUTHORIZATION_CODE in the following curl command, and run it:
+- Now we got everything to generate the access token. Replace `CLIENT_ID`, `CLIENT_SECRET` and `AUTHORIZATION_CODE` in the following curl command, and run it:
 
 - curl -X POST "http://localhost:4000/oauth/token?client_id=CLIENT_ID&client_secret=CLIENT_SECRET&grant_type=authorization_code&code=AUTHORIZATION_CODE&redirect_uri=urn:ietf:wg:oauth:2.0:oob"
 - You’ll receive an access token along with other details. Copy the access token, and use it for to retrieve a resource:
